@@ -1,30 +1,21 @@
 #include <stdio.h>
+
 int main() {
- double revenue;
- double expenses;
- double balance;
+    char municipality[50];
+    char mayor[50];
+    int population;
+    
+    printf("Municipality Financial Management System\n");
+    printf("Enter name of Municipality: ");
+    scanf("%49s", municipality);
+    printf("Enter name of mayor: ");
+    scanf("%49s", mayor);
+    printf("Enter population: ");
+    scanf("%d", &population);
 
- printf("MUNICIPAL BUDGET CALCULATOR\n");
- printf("---------------------------\n");
-
- printf("Enter total revenue: ");
- scanf("%lf", &revenue);
-
- printf("Enter total expenses: ");
- scanf("%lf", &expenses);
-
- balance = revenue - expenses;
- printf("\nRevenue: %.2f\n", revenue);
- printf("Expenses: %.2f\n", expenses);
-
- if (balance > 0) {
-    printf("Surplus: %.2f\n", balance);
- } else if (balance < 0) {
-    printf("Deficit: %.2f\n", -balance);
- } else {
-    printf("The budget is balanced.\n");
- }
-
- return 0;
- 
+    printf("\n------------------------------------------\n");
+    printf("Municipality: %s\n", municipality);
+    printf("Mayor: %s\n", mayor);
+    printf("Population: %d\n", population);
+    return 0;
 }
